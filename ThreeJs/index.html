@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--favicon -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://miro.medium.com/v2/resize:fit:300/1*pwSoEIU3qr3xVNmqjIBfpA.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://miro.medium.com/v2/resize:fit:300/1*pwSoEIU3qr3xVNmqjIBfpA.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://miro.medium.com/v2/resize:fit:300/1*pwSoEIU3qr3xVNmqjIBfpA.png">
+
+        <title>Three.Js</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+	</head>
+	<body>
+        <!-- Remove this when import maps will be widely supported -->
+		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "../../libs/three140/build/three.module.js"
+              }
+            }
+        </script>
+        <script type="module">
+            import { App } from './app.js';
+
+            document.addEventListener("DOMContentLoaded", function(){
+                const app = new App();
+                window.app = app;
+            });
+        </script>
+	</body>
+</html>
